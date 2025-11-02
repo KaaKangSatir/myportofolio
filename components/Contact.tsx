@@ -20,14 +20,14 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        "process.env.yuuka",
-        "process.env.ky",
+        "NEXT_PUBLIC_yuuka",
+        "NEXT_PUBLIC_ky",
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        "process.env.kaayuuka",
+        "NEXT_PUBLIC_kaayuuka",
       )
 
       toast.success("Pesan berhasil dikirim!")
